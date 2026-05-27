@@ -12,9 +12,9 @@ Add client logos here:
 - assets/clients/client-6.png
 
 Add workshop and training photos here:
-- assets/workshops/leadership-development.jpg
-- assets/workshops/team-building.jpg
-- assets/workshops/hr-compliance.jpg
-- assets/workshops/strategic-planning.jpg
+- assets/workshops/leadership-development.JPG
+- assets/workshops/team-building.jpeg
+- assets/workshops/hr-compliance.JPG
+- assets/workshops/strategic-planning.JPG
 
 You can use .png, .jpg, .jpeg, or .webp images, but update the file extension in index.html if it differs from the names above.
