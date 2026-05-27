@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="White Ocean Consultancy - Strategic HR Solutions for Business Growth">
+    <meta name="keywords" content="HR Consulting, Human Resources, Talent Acquisition, Organizational Development">
+    <title>White Ocean Consultancy | Strategic HR Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0c447c;
+            --primary-light: #185fa5;
+            --primary-lighter: #2a7ec8;
+            --accent: #00d4ff;
+            --text-dark: #1a1a1a;
+            --text-muted: #5f5e5a;
+            --bg-light: #f8f9fb;
+            --bg-white: #ffffff;
+            --border-color: #e0e5eb;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            background: var(--bg-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-light);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-light);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            box-shadow: 0 2px 20px rgba(12, 68, 124, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            animation: slideDown 0.5s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary);
+        }
+
+        .logo img {
+            width: 52px;
+            height: 52px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .logo span {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .cta-nav {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(12, 68, 124, 0.3);
+        }
+
+        .cta-nav:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(12, 68, 124, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 50%, #145a9c 100%);
+            color: white;
+            padding: 8rem 2rem;
+            position: relative;
+            overflow: hidden;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(0, 212, 255, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(30px); }
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: white;
+            color: var(--primary);
+            padding: 1rem 2.5rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 2px solid white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            background: var(--accent);
+            color: var(--primary);
+        }
+
+        .btn-secondary {
+            display: inline-block;
+            background: transparent;
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: 2px solid white;
+            cursor: pointer;
+            margin-left: 1rem;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary);
+            transform: translateY(-4px);
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 2rem;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .section-white {
+            background: white;
+        }
+
+        .section-light {
+            background: linear-gradient(135deg, var(--bg-light) 0%, #f0f4f9 100%);
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            max-width: 600px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: var(--primary-light);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        h4 {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* Cards Grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(12, 68, 124, 0.15);
+            border-color: var(--primary-lighter);
+        }
+
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .card h3 {
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        /* Values Grid */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .value-badge {
+            background: linear-gradient(135deg, rgba(12, 68, 124, 0.1) 0%, rgba(0, 212, 255, 0.1) 100%);
+            border: 2px solid var(--primary);
+            border-radius: 12px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 0.95rem;
+        }
+
+        .value-badge:hover {
+            transform: scale(1.05);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            box-shadow: 0 10px 25px rgba(12, 68, 124, 0.25);
+        }
+
+        /* Statement Box */
+        .statement-box {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(12, 68, 124, 0.1) 100%);
+            border-left: 4px solid var(--accent);
+            padding: 2.5rem;
+            border-radius: 12px;
+            margin: 2.5rem 0;
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--primary);
+            line-height: 1.8;
+        }
+
+        /* Services Section */
+        .service-category {
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            animation: slideIn 0.5s ease-out backwards;
+        }
+
+        .service-category:hover {
+            box-shadow: 0 15px 35px rgba(12, 68, 124, 0.1);
+            border-color: var(--primary-lighter);
+        }
+
+        .service-category h3 {
+            border-bottom: 3px solid var(--accent);
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .service-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .service-content ul {
+            margin-left: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .service-content li {
+            margin-bottom: 0.8rem;
+            color: var(--text-muted);
+            transition: all 0.3s ease;
+        }
+
+        .service-content li:hover {
+            color: var(--primary);
+            transform: translateX(5px);
+        }
+
+        /* Training Grid */
+        .training-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .training-item {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            padding: 1.2rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            color: white;
+            text-align: center;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .training-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(12, 68, 124, 0.25);
+        }
+
+        /* Clients */
+        .client-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 1.25rem;
+            margin-top: 2rem;
+        }
+
+        .client-logo {
+            min-height: 120px;
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 1.5rem;
+            color: var(--primary);
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            transition: all 0.3s ease;
+        }
+
+        .client-logo img {
+            max-width: 140px;
+            max-height: 68px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .client-logo:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 30px rgba(12, 68, 124, 0.12);
+            border-color: var(--primary-lighter);
+        }
+
+        .client-note {
+            margin-top: 1.5rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Workshop Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-item {
+            min-height: 260px;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            background:
+                linear-gradient(135deg, rgba(12, 68, 124, 0.82), rgba(24, 95, 165, 0.72)),
+                linear-gradient(45deg, #dbe7f2 25%, transparent 25%),
+                linear-gradient(-45deg, #dbe7f2 25%, transparent 25%),
+                #eef4f9;
+            background-size: auto, 34px 34px, 34px 34px, auto;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .gallery-item img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(12, 68, 124, 0.08) 0%, rgba(5, 22, 42, 0.72) 100%);
+        }
+
+        .gallery-item.large {
+            grid-column: span 2;
+        }
+
+        .gallery-caption {
+            width: 100%;
+            color: white;
+            padding: 1.25rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .gallery-caption h3 {
+            color: white;
+            margin-bottom: 0.4rem;
+            font-size: 1.2rem;
+        }
+
+        .gallery-caption p {
+            color: rgba(255, 255, 255, 0.88);
+            font-size: 0.95rem;
+        }
+
+        /* Inquiry Form */
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .contact-panel {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            border-radius: 8px;
+            padding: 2.5rem;
+        }
+
+        .contact-panel h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .contact-panel p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1rem;
+        }
+
+        .contact-detail {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.22);
+        }
+
+        .inquiry-form {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 16px 40px rgba(12, 68, 124, 0.08);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            gap: 0.45rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-field.full {
+            grid-column: 1 / -1;
+        }
+
+        .form-field label {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .form-field input,
+        .form-field select,
+        .form-field textarea {
+            width: 100%;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 0.9rem 1rem;
+            font: inherit;
+            color: var(--text-dark);
+            background: #fbfdff;
+            transition: all 0.2s ease;
+        }
+
+        .form-field textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-field input:focus,
+        .form-field select:focus,
+        .form-field textarea:focus {
+            outline: none;
+            border-color: var(--primary-lighter);
+            box-shadow: 0 0 0 4px rgba(42, 126, 200, 0.12);
+            background: white;
+        }
+
+        .form-help {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            margin-top: 0.8rem;
+        }
+
+        /* CTA Section */
+        .cta-final {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            text-align: center;
+            padding: 5rem 2rem;
+            border-radius: 16px;
+            margin: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-final::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 212, 255, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .cta-final .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-final h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .cta-final p {
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 1.15rem;
+            margin-bottom: 2.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--primary) 0%, #092140 100%);
+            color: white;
+            padding: 4rem 2rem 2rem;
+        }
+
+        footer .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-col h4 {
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col p, .footer-col a {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 0.8rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-col a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 2rem 0;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav .container {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            nav a::after {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .btn-secondary {
+                display: block;
+                margin: 1rem 0 0 0;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid,
+            .contact-layout,
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item.large {
+                grid-column: span 1;
+            }
+
+            section {
+                padding: 3rem 1rem;
+            }
+        }
+
+        /* Utility */
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-4 {
+            margin-top: 2rem;
+        }
+
+        .mb-4 {
+            margin-bottom: 2rem;
+        }
+
+        .opacity-80 {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="#home" class="logo">
+                <img src="assets/logo.png" alt="White Ocean logo" onerror="this.style.display='none'">
+                <span>White Ocean</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#clients">Clients</a></li>
+                <li><a href="#workshops">Workshops</a></li>
+                <li><a href="#why">Why Us</a></li>
+                <li><a href="#contact" class="cta-nav">Send Inquiry</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Transform Your Organization Through Strategic HR Excellence</h1>
+            <p>We are strategic partners in building businesses by maximizing the value of human capital and aligning it with your organization's vision and goals.</p>
+            <div>
+                <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Send an Inquiry</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section-white" id="about">
+        <div class="container">
+            <h2>Who We Are</h2>
+            <p class="section-subtitle">Leading HR solutions provider dedicated to your business growth and development</p>
+
+            <p style="font-size: 1.1rem; margin-bottom: 2rem; color: var(--text-muted); line-height: 1.8;">
+                White Ocean Consultancy is a company that offers Human Resource solutions to all types of companies ensuring the growth and development of each business we work with. We are strategic partners in building businesses by maximizing the value of human capital and aligning it with organisation initiatives, values, strategies and the needs of all stakeholders.
+            </p>
+
+            <div class="statement-box">
+                <strong>Our Mission</strong><br><br>
+                We provide a comprehensive range of advisory services based on our clients' specific needs using our extensive knowledge of the Human Resources industry.
+            </div>
+
+            <h3 style="margin-top: 3rem;">Our Core Values</h3>
+            <div class="values-grid">
+                <div class="value-badge">Engaged</div>
+                <div class="value-badge">Committed</div>
+                <div class="value-badge">Growth</div>
+                <div class="value-badge">Composed</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section-light" id="services">
+        <div class="container">
+            <h2>Our Comprehensive Services</h2>
+            <p class="section-subtitle">From talent acquisition to organizational development, we offer complete HR solutions</p>
+
+            <div class="service-category">
+                <h3><span class="service-number">1</span>Industrial & Employee Relations</h3>
+                <div class="service-content">
+                    <p>We assess the state of IR in an organisation and give advice on Disciplinary matters, Works Council (WC), grievances, codes of conduct as well as related issues.</p>
+                    <h4>Our expertise includes:</h4>
+                    <ul>
+                        <li>Codes of conduct design and implementation</li>
+                        <li>Works Council management with legal compliance</li>
+                        <li>Disciplinary Management Training</li>
+                        <li>Conflict resolution and negotiation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-category">
+                <h3><span class="service-number">2</span>Talent Acquisition & Recruitment</h3>
+                <div class="service-content">
+                    <p>We invest time and effort to understand your organization and find the perfect fit for your team.</p>
+                    <h4>Our recruitment includes:</h4>
+                    <ul>
+                        <li>Executive headhunting services</li>
+                        <li>Access to extensive candidate database</li>
+                        <li>Targeted recruitment campaigns</li>
+                        <li>Regional and international candidates</li>
+                        <li>Thorough background verification</li>
+                        <li>Psychometric assessments</li>
+                        <li>Private interview facilities</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-category">
+                <h3><span class="service-number">3</span>Organizational Design & Rightsizing</h3>
+                <div class="service-content">
+                    <p>Expert guidance on organizational transformation and restructuring with legal and ethical compliance.</p>
+                    <h4>Services include:</h4>
+                    <ul>
+                        <li>Organizational restructuring</li>
+                        <li>Retrenchment and redundancy planning</li>
+                        <li>Change management strategies</li>
+                        <li>Risk mitigation and compliance</li>
+                        <li>Employee transition support</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-category">
+                <h3><span class="service-number">4</span>People Strategy & Development</h3>
+                <div class="service-content">
+                    <p>Strategic initiatives to align your workforce with organizational goals and values.</p>
+                    <h4>Our approach:</h4>
+                    <ul>
+                        <li>Strategic planning facilitation</li>
+                        <li>Team building programs</li>
+                        <li>Culture audits and assessment</li>
+                        <li>Executive coaching</li>
+                        <li>Organizational effectiveness programs</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-category">
+                <h3><span class="service-number">5</span>Research & Surveys</h3>
+                <div class="service-content">
+                    <p>Data-driven insights through comprehensive business research and employee surveys.</p>
+                    <h4>Survey types we conduct:</h4>
+                    <ul>
+                        <li>Employee Engagement surveys</li>
+                        <li>Culture audits</li>
+                        <li>Salary benchmarking</li>
+                        <li>Client satisfaction research</li>
+                        <li>Market analysis</li>
+                        <li>Brand loyalty studies</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-category">
+                <h3><span class="service-number">6</span>Learning & Development</h3>
+                <div class="service-content">
+                    <p>Comprehensive training programs to enhance skills and drive organizational performance.</p>
+                    <h4>Training programs available:</h4>
+                    <div class="training-grid">
+                        <div class="training-item">Evidence Based Training</div>
+                        <div class="training-item">Personal Development</div>
+                        <div class="training-item">Presentations Skills</div>
+                        <div class="training-item">Corporate Governance</div>
+                        <div class="training-item">Change Management</div>
+                        <div class="training-item">Customer Care</div>
+                        <div class="training-item">Strategic Planning</div>
+                        <div class="training-item">Problem Solving</div>
+                        <div class="training-item">Disciplinary Management</div>
+                        <div class="training-item">Leadership Development</div>
+                        <div class="training-item">Team Effectiveness</div>
+                        <div class="training-item">HR for Non-HR</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-category">
+                <h3><span class="service-number">7</span>Organizational Development</h3>
+                <div class="service-content">
+                    <p>Transform your organization through performance management and strategic change initiatives.</p>
+                    <h4>We address:</h4>
+                    <ul>
+                        <li>Performance management systems</li>
+                        <li>Employee motivation and engagement</li>
+                        <li>Organizational change management</li>
+                        <li>Productivity improvement</li>
+                        <li>Sustainable business growth</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-category">
+                <h3><span class="service-number">8</span>Policy & Procedure Development</h3>
+                <div class="service-content">
+                    <p>Customized HR policies aligned with your culture and compliance requirements.</p>
+                    <h4>Sample policies we develop:</h4>
+                    <ul>
+                        <li>Remote work policies</li>
+                        <li>Occupational health & safety</li>
+                        <li>Leave management</li>
+                        <li>Employee onboarding</li>
+                        <li>Code of conduct</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-category">
+                <h3><span class="service-number">9</span>Balanced Scorecard Development</h3>
+                <div class="service-content">
+                    <p>Strategic measurement systems to align operations with your organizational vision.</p>
+                    <ul>
+                        <li>Process performance measurement</li>
+                        <li>Market share analysis</li>
+                        <li>Learning and development metrics</li>
+                        <li>Strategic goal alignment</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-category">
+                <h3><span class="service-number">10</span>HR Compliance Audits</h3>
+                <div class="service-content">
+                    <p>Comprehensive audits ensuring compliance with labor laws and best practices.</p>
+                    <h4>Audit focus areas:</h4>
+                    <ul>
+                        <li>Employment practices review</li>
+                        <li>Regulatory compliance assessment</li>
+                        <li>Cost optimization opportunities</li>
+                        <li>Post-restructuring audits</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-category">
+                <h3><span class="service-number">11</span>Services for NECs</h3>
+                <div class="service-content">
+                    <p>Specialized support for National Employment Councils administration and operations.</p>
+                    <h4>Our NEC services:</h4>
+                    <ul>
+                        <li>NEC Administration</li>
+                        <li>CBA Drafting</li>
+                        <li>Policy development</li>
+                        <li>Conciliation & Arbitration</li>
+                        <li>Job evaluation</li>
+                        <li>Labor law compliance</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-category">
+                <h3><span class="service-number">12</span>Team Building</h3>
+                <div class="service-content">
+                    <p>Energizing team building sessions designed for meaningful results and lasting impact.</p>
+                    <ul>
+                        <li>Themed workshops</li>
+                        <li>Small to large team facilitation</li>
+                        <li>Result-oriented activities</li>
+                        <li>Custom program design</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section-white" id="why">
+        <div class="container">
+            <h2>Why Choose White Ocean</h2>
+            <p class="section-subtitle">We are a world-class HR consultancy dedicated to your success</p>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>✨ Industry Expertise</h3>
+                    <p>Deep knowledge across all business sectors with proven success across diverse industries and organizational sizes.</p>
+                </div>
+                <div class="card">
+                    <h3>🎯 Tailored Solutions</h3>
+                    <p>Customized approaches based on your unique organizational needs, culture, and strategic objectives.</p>
+                </div>
+                <div class="card">
+                    <h3>🌍 Global Standards</h3>
+                    <p>Best practices and modern technologies adapted to your local context and regulatory environment.</p>
+                </div>
+                <div class="card">
+                    <h3>📈 Proven Results</h3>
+                    <p>Track record of helping businesses grow, transform, and develop their human capital effectively.</p>
+                </div>
+                <div class="card">
+                    <h3>🤝 Partnership Approach</h3>
+                    <p>We're strategic partners invested in your long-term success, not just service providers.</p>
+                </div>
+                <div class="card">
+                    <h3>⚡ Comprehensive Services</h3>
+                    <p>Full spectrum of HR solutions under one roof for seamless, integrated implementation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="section-light" id="clients">
+        <div class="container">
+            <h2>Clients We Serve</h2>
+            <p class="section-subtitle">Trusted by growing organizations that need practical HR support, advisory services, and people development programs.</p>
+
+            <div class="client-grid">
+                <div class="client-logo"><img src="assets/clients/client-1.png" alt="Client logo 1" onerror="this.remove()"></div>
+                <div class="client-logo"><img src="assets/clients/client-2.png" alt="Client logo 2" onerror="this.remove()"></div>
+                <div class="client-logo"><img src="assets/clients/client-3.png" alt="Client logo 3" onerror="this.remove()"></div>
+                <div class="client-logo"><img src="assets/clients/client-4.png" alt="Client logo 4" onerror="this.remove()"></div>
+                <div class="client-logo"><img src="assets/clients/client-5.png" alt="Client logo 5" onerror="this.remove()"></div>
+                <div class="client-logo"><img src="assets/clients/client-6.png" alt="Client logo 6" onerror="this.remove()"></div>
+            </div>
+
+            <p class="client-note">Add logo files in assets/clients using the names client-1.png, client-2.png, and so on.</p>
+        </div>
+    </section>
+
+    <!-- Workshops Section -->
+    <section class="section-white" id="workshops">
+        <div class="container">
+            <h2>Training & Workshop Moments</h2>
+            <p class="section-subtitle">A visual space for showcasing completed trainings, facilitated workshops, team sessions, and leadership development programs.</p>
+
+            <div class="gallery-grid">
+                <div class="gallery-item large">
+                    <img src="assets/workshops/leadership-development.jpg" alt="Leadership development workshop" onerror="this.remove()">
+                    <div class="gallery-caption">
+                        <h3>Leadership Development Workshop</h3>
+                        <p>Leadership and management development training session.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/workshops/team-building.jpg" alt="Team building session" onerror="this.remove()">
+                    <div class="gallery-caption">
+                        <h3>Team Building Session</h3>
+                        <p>Showcase active team engagement and facilitation.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/workshops/hr-compliance.jpg" alt="HR compliance training" onerror="this.remove()">
+                    <div class="gallery-caption">
+                        <h3>HR Compliance Training</h3>
+                        <p>Highlight classroom, boardroom, or on-site training delivery.</p>
+                    </div>
+                </div>
+                <div class="gallery-item large">
+                    <img src="assets/workshops/strategic-planning.jpg" alt="Strategic planning facilitation" onerror="this.remove()">
+                    <div class="gallery-caption">
+                        <h3>Strategic Planning Facilitation</h3>
+                        <p>Use this space for workshop photos, group discussions, and client sessions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="section-light">
+        <div class="container text-center">
+            <h2>Our Vision</h2>
+            <div class="statement-box" style="max-width: 700px; margin: 2rem auto;">
+                To provide reliable business consulting services of consistent high quality by adopting global best practices and technologies.
+            </div>
+        </div>
+    </section>
+
+    <!-- Inquiry Section -->
+    <section class="section-white" id="contact">
+        <div class="container">
+            <div class="contact-layout">
+                <div class="contact-panel">
+                    <h2>Send an Inquiry</h2>
+                    <p>Tell us what your organization needs help with and we will respond with the right next steps.</p>
+                    <p>Use the form to request a consultation, ask about training, or discuss HR advisory support.</p>
+                    <div class="contact-detail">
+                        <p><strong>Email:</strong> info@whiteocean.co.zw</p>
+                        <p><strong>Location:</strong> Harare, Zimbabwe</p>
+                    </div>
+                </div>
+
+                <form class="inquiry-form" id="inquiryForm">
+                    <div class="form-grid">
+                        <div class="form-field">
+                            <label for="name">Full name</label>
+                            <input type="text" id="name" name="name" autocomplete="name" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="company">Company</label>
+                            <input type="text" id="company" name="company" autocomplete="organization">
+                        </div>
+                        <div class="form-field">
+                            <label for="email">Email address</label>
+                            <input type="email" id="email" name="email" autocomplete="email" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="phone">Phone number</label>
+                            <input type="tel" id="phone" name="phone" autocomplete="tel">
+                        </div>
+                        <div class="form-field full">
+                            <label for="service">Area of interest</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a service</option>
+                                <option>HR Advisory</option>
+                                <option>Recruitment</option>
+                                <option>Training & Development</option>
+                                <option>Industrial Relations</option>
+                                <option>Organizational Development</option>
+                                <option>Team Building</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-field full">
+                            <label for="message">Inquiry details</label>
+                            <textarea id="message" name="message" placeholder="Briefly describe what you need support with..." required></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Send Email Inquiry</button>
+                    <p class="form-help">Submitting opens your email app with the inquiry ready to send to White Ocean Consultancy.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-col">
+                <h4>White Ocean</h4>
+                <p>Strategic partners in building businesses through human resource excellence.</p>
+                <p><strong>Location:</strong> Harare, Zimbabwe</p>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <a href="#services">Recruitment</a>
+                <a href="#services">Training & Development</a>
+                <a href="#services">Organizational Development</a>
+                <a href="#services">HR Compliance</a>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="#about">About Us</a>
+                <a href="#services">Our Services</a>
+                <a href="#clients">Clients</a>
+                <a href="#workshops">Workshops</a>
+                <a href="#why">Why Choose Us</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 White Ocean Consultancy. All rights reserved.</p>
+            <p>Crafted with ❤️ in Harare, Zimbabwe</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('inquiryForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(event.currentTarget);
+            const name = formData.get('name') || '';
+            const company = formData.get('company') || '';
+            const email = formData.get('email') || '';
+            const phone = formData.get('phone') || '';
+            const service = formData.get('service') || '';
+            const message = formData.get('message') || '';
+
+            const subject = encodeURIComponent('White Ocean inquiry - ' + service);
+            const body = encodeURIComponent(
+                'Full name: ' + name + '\n' +
+                'Company: ' + company + '\n' +
+                'Email: ' + email + '\n' +
+                'Phone: ' + phone + '\n' +
+                'Area of interest: ' + service + '\n\n' +
+                'Inquiry details:\n' + message
+            );
+
+            window.location.href = 'mailto:info@whiteocean.co.zw?subject=' + subject + '&body=' + body;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.sublime-project
+.sublime-workspace
+
+# Node (if using later)
+node_modules/
+npm-debug.log
+
+# Environment
+.env
+.env.local
+
+# Build
+dist/
+build/
+
+# Temporary
+*.tmp
+.cache/
