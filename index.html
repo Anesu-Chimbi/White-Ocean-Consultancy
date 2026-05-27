@@ -498,6 +498,182 @@
             box-shadow: 0 10px 20px rgba(12, 68, 124, 0.25);
         }
 
+        /* Clients */
+        .client-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 1.25rem;
+            margin-top: 2rem;
+        }
+
+        .client-logo {
+            min-height: 120px;
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 1.5rem;
+            color: var(--primary);
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            transition: all 0.3s ease;
+        }
+
+        .client-logo:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 30px rgba(12, 68, 124, 0.12);
+            border-color: var(--primary-lighter);
+        }
+
+        .client-note {
+            margin-top: 1.5rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Workshop Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-item {
+            min-height: 260px;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            background:
+                linear-gradient(135deg, rgba(12, 68, 124, 0.82), rgba(24, 95, 165, 0.72)),
+                linear-gradient(45deg, #dbe7f2 25%, transparent 25%),
+                linear-gradient(-45deg, #dbe7f2 25%, transparent 25%),
+                #eef4f9;
+            background-size: auto, 34px 34px, 34px 34px, auto;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .gallery-item.large {
+            grid-column: span 2;
+        }
+
+        .gallery-caption {
+            width: 100%;
+            color: white;
+            padding: 1.25rem;
+            background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.62) 100%);
+        }
+
+        .gallery-caption h3 {
+            color: white;
+            margin-bottom: 0.4rem;
+            font-size: 1.2rem;
+        }
+
+        .gallery-caption p {
+            color: rgba(255, 255, 255, 0.88);
+            font-size: 0.95rem;
+        }
+
+        /* Inquiry Form */
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .contact-panel {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            border-radius: 8px;
+            padding: 2.5rem;
+        }
+
+        .contact-panel h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .contact-panel p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1rem;
+        }
+
+        .contact-detail {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.22);
+        }
+
+        .inquiry-form {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 16px 40px rgba(12, 68, 124, 0.08);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            gap: 0.45rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-field.full {
+            grid-column: 1 / -1;
+        }
+
+        .form-field label {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .form-field input,
+        .form-field select,
+        .form-field textarea {
+            width: 100%;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 0.9rem 1rem;
+            font: inherit;
+            color: var(--text-dark);
+            background: #fbfdff;
+            transition: all 0.2s ease;
+        }
+
+        .form-field textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-field input:focus,
+        .form-field select:focus,
+        .form-field textarea:focus {
+            outline: none;
+            border-color: var(--primary-lighter);
+            box-shadow: 0 0 0 4px rgba(42, 126, 200, 0.12);
+            background: white;
+        }
+
+        .form-help {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            margin-top: 0.8rem;
+        }
+
         /* CTA Section */
         .cta-final {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
@@ -619,6 +795,16 @@
                 grid-template-columns: 1fr;
             }
 
+            .gallery-grid,
+            .contact-layout,
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item.large {
+                grid-column: span 1;
+            }
+
             section {
                 padding: 3rem 1rem;
             }
@@ -646,12 +832,14 @@
     <!-- Navigation -->
     <nav>
         <div class="container">
-            <a href="#home" class="logo"> White Ocean Consultancy</a>
+            <a href="#home" class="logo">White Ocean</a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#clients">Clients</a></li>
+                <li><a href="#workshops">Workshops</a></li>
                 <li><a href="#why">Why Us</a></li>
-                <li><a href="#contact" class="cta-nav">Get Started</a></li>
+                <li><a href="#contact" class="cta-nav">Send Inquiry</a></li>
             </ul>
         </div>
     </nav>
@@ -662,7 +850,7 @@
             <h1>Transform Your Organization Through Strategic HR Excellence</h1>
             <p>We are strategic partners in building businesses by maximizing the value of human capital and aligning it with your organization's vision and goals.</p>
             <div>
-                <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Start Your Journey</button>
+                <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Send an Inquiry</button>
             </div>
         </div>
     </section>
@@ -888,7 +1076,7 @@
     <!-- Why Choose Us -->
     <section class="section-white" id="why">
         <div class="container">
-            <h2>Why Choose White Ocean Consultancy</h2>
+            <h2>Why Choose White Ocean</h2>
             <p class="section-subtitle">We are a world-class HR consultancy dedicated to your success</p>
 
             <div class="cards-grid">
@@ -920,6 +1108,60 @@
         </div>
     </section>
 
+    <!-- Clients Section -->
+    <section class="section-light" id="clients">
+        <div class="container">
+            <h2>Clients We Serve</h2>
+            <p class="section-subtitle">Trusted by growing organizations that need practical HR support, advisory services, and people development programs.</p>
+
+            <div class="client-grid">
+                <div class="client-logo">Client Logo</div>
+                <div class="client-logo">Client Logo</div>
+                <div class="client-logo">Client Logo</div>
+                <div class="client-logo">Client Logo</div>
+                <div class="client-logo">Client Logo</div>
+                <div class="client-logo">Client Logo</div>
+            </div>
+
+            <p class="client-note">Replace these placeholders with client logo images once the final artwork is available.</p>
+        </div>
+    </section>
+
+    <!-- Workshops Section -->
+    <section class="section-white" id="workshops">
+        <div class="container">
+            <h2>Training & Workshop Moments</h2>
+            <p class="section-subtitle">A visual space for showcasing completed trainings, facilitated workshops, team sessions, and leadership development programs.</p>
+
+            <div class="gallery-grid">
+                <div class="gallery-item large">
+                    <div class="gallery-caption">
+                        <h3>Leadership Development Workshop</h3>
+                        <p>Add a real photo from a leadership or management training session here.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-caption">
+                        <h3>Team Building Session</h3>
+                        <p>Showcase active team engagement and facilitation.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-caption">
+                        <h3>HR Compliance Training</h3>
+                        <p>Highlight classroom, boardroom, or on-site training delivery.</p>
+                    </div>
+                </div>
+                <div class="gallery-item large">
+                    <div class="gallery-caption">
+                        <h3>Strategic Planning Facilitation</h3>
+                        <p>Use this space for workshop photos, group discussions, and client sessions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Vision Section -->
     <section class="section-light">
         <div class="container text-center">
@@ -930,15 +1172,60 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
+    <!-- Inquiry Section -->
     <section class="section-white" id="contact">
         <div class="container">
-            <div class="cta-final">
-                <h2>Ready to Transform Your Organization?</h2>
-                <p>Let's partner together to maximize your human capital and achieve your business goals</p>
-                <button class="btn-primary" onclick="alert('Contact White Ocean Consultancy\n\nLocation: Harare, Zimbabwe\n\nEmail: info@whiteoceanconsultancy.com\nPhone: +263 772 429 354\n\nWe look forward to discussing your HR needs!')">
-                    Get in Touch
-                </button>
+            <div class="contact-layout">
+                <div class="contact-panel">
+                    <h2>Send an Inquiry</h2>
+                    <p>Tell us what your organization needs help with and we will respond with the right next steps.</p>
+                    <p>Use the form to request a consultation, ask about training, or discuss HR advisory support.</p>
+                    <div class="contact-detail">
+                        <p><strong>Email:</strong> info@whiteocean.co.zw</p>
+                        <p><strong>Location:</strong> Harare, Zimbabwe</p>
+                    </div>
+                </div>
+
+                <form class="inquiry-form" id="inquiryForm">
+                    <div class="form-grid">
+                        <div class="form-field">
+                            <label for="name">Full name</label>
+                            <input type="text" id="name" name="name" autocomplete="name" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="company">Company</label>
+                            <input type="text" id="company" name="company" autocomplete="organization">
+                        </div>
+                        <div class="form-field">
+                            <label for="email">Email address</label>
+                            <input type="email" id="email" name="email" autocomplete="email" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="phone">Phone number</label>
+                            <input type="tel" id="phone" name="phone" autocomplete="tel">
+                        </div>
+                        <div class="form-field full">
+                            <label for="service">Area of interest</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a service</option>
+                                <option>HR Advisory</option>
+                                <option>Recruitment</option>
+                                <option>Training & Development</option>
+                                <option>Industrial Relations</option>
+                                <option>Organizational Development</option>
+                                <option>Team Building</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-field full">
+                            <label for="message">Inquiry details</label>
+                            <textarea id="message" name="message" placeholder="Briefly describe what you need support with..." required></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Send Email Inquiry</button>
+                    <p class="form-help">Submitting opens your email app with the inquiry ready to send to White Ocean Consultancy.</p>
+                </form>
             </div>
         </div>
     </section>
@@ -947,7 +1234,7 @@
     <footer>
         <div class="container">
             <div class="footer-col">
-                <h4>White Ocean Consultancy</h4>
+                <h4>White Ocean</h4>
                 <p>Strategic partners in building businesses through human resource excellence.</p>
                 <p><strong>Location:</strong> Harare, Zimbabwe</p>
             </div>
@@ -962,14 +1249,41 @@
                 <h4>Company</h4>
                 <a href="#about">About Us</a>
                 <a href="#services">Our Services</a>
+                <a href="#clients">Clients</a>
+                <a href="#workshops">Workshops</a>
                 <a href="#why">Why Choose Us</a>
                 <a href="#contact">Contact</a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 White Ocean Consultancy. All rights reserved.</p>
+            <p>&copy; 2024 White Ocean Consultancy. All rights reserved.</p>
             <p>Crafted with ❤️ in Harare, Zimbabwe</p>
         </div>
     </footer>
+    <script>
+        document.getElementById('inquiryForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(event.currentTarget);
+            const name = formData.get('name') || '';
+            const company = formData.get('company') || '';
+            const email = formData.get('email') || '';
+            const phone = formData.get('phone') || '';
+            const service = formData.get('service') || '';
+            const message = formData.get('message') || '';
+
+            const subject = encodeURIComponent('White Ocean inquiry - ' + service);
+            const body = encodeURIComponent(
+                'Full name: ' + name + '\n' +
+                'Company: ' + company + '\n' +
+                'Email: ' + email + '\n' +
+                'Phone: ' + phone + '\n' +
+                'Area of interest: ' + service + '\n\n' +
+                'Inquiry details:\n' + message
+            );
+
+            window.location.href = 'mailto:info@whiteocean.co.zw?subject=' + subject + '&body=' + body;
+        });
+    </script>
 </body>
 </html>
