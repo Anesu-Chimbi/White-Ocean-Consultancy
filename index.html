@@ -774,10 +774,39 @@
             margin-bottom: 0.8rem;
             text-decoration: none;
             transition: color 0.3s ease;
+            display: block;
         }
 
         .footer-col a:hover {
             color: var(--accent);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0;
+            color: white;
+            font-weight: 700;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .social-links a:hover {
+            color: var(--primary);
+            background: var(--accent);
+            border-color: var(--accent);
+            transform: translateY(-3px);
         }
 
         .footer-bottom {
@@ -868,7 +897,7 @@
         <div class="container">
             <a href="#home" class="logo">
                 <img src="assets/logo.png" alt="White Ocean logo" onerror="this.style.display='none'">
-                <span>White Ocean</span>
+                <span>White Ocean Consultancy</span>
             </a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
@@ -1154,10 +1183,14 @@
             <div class="client-grid">
                 <div class="client-logo"><img src="assets/clients/client-1.png" alt="Client logo 1" onerror="this.remove()"></div>
                 <div class="client-logo"><img src="assets/clients/client-2.png" alt="Client logo 2" onerror="this.remove()"></div>
-                <div class="client-logo"><img src="assets/clients/client-3.png" alt="Client logo 3" onerror="this.remove()"></div>
+                <div class="client-logo"><img src="assets/clients/client-3.jpg" alt="Client logo 3" onerror="this.remove()"></div>
                 <div class="client-logo"><img src="assets/clients/client-4.png" alt="Client logo 4" onerror="this.remove()"></div>
                 <div class="client-logo"><img src="assets/clients/client-5.png" alt="Client logo 5" onerror="this.remove()"></div>
                 <div class="client-logo"><img src="assets/clients/client-6.png" alt="Client logo 6" onerror="this.remove()"></div>
+                <div class="client-logo"><img src="assets/clients/client-7.png" alt="Client logo 7" onerror="this.remove()"></div>
+                <div class="client-logo"><img src="assets/clients/client-8.png" alt="Client logo 8" onerror="this.remove()"></div>
+                <div class="client-logo"><img src="assets/clients/client-9.png" alt="Client logo 9" onerror="this.remove()"></div>
+                <div class="client-logo"><img src="assets/clients/client-10.png" alt="Client logo 10" onerror="this.remove()"></div>
             </div>
 
             <p class="client-note">Add logo files in assets/clients using the names client-1.png, client-2.png, and so on.</p>
@@ -1275,7 +1308,7 @@
     <footer>
         <div class="container">
             <div class="footer-col">
-                <h4>White Ocean</h4>
+                <h4>White Ocean Consultancy</h4>
                 <p>Strategic partners in building businesses through human resource excellence.</p>
                 <p><strong>Location:</strong> Harare, Zimbabwe</p>
             </div>
@@ -1294,6 +1327,16 @@
                 <a href="#workshops">Workshops</a>
                 <a href="#why">Why Choose Us</a>
                 <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <p>Connect with White Ocean Consultancy online.</p>
+                <div class="social-links" aria-label="Social media links">
+                    <a href="#" aria-label="Facebook">f</a>
+                    <a href="#" aria-label="LinkedIn">in</a>
+                    <a href="#" aria-label="Instagram">ig</a>
+                    <a href="mailto:info@whiteocean.co.zw" aria-label="Email">@</a>
+                </div>
             </div>
         </div>
         <div class="footer-bottom">
