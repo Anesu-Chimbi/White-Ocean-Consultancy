@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 180" role="img" aria-labelledby="title">
+  <title id="title">Tailored solutions</title>
+  <circle cx="122" cy="100" r="58" fill="#e9eef4"/>
+  <rect x="50" y="42" width="72" height="48" rx="8" fill="#0c447c" transform="rotate(-7 86 66)"/>
+  <rect x="154" y="42" width="78" height="58" rx="12" fill="#eef2f7"/>
+  <rect x="177" y="26" width="72" height="32" rx="8" fill="#ec6b1f"/>
+  <rect x="82" y="82" width="86" height="62" rx="16" fill="#ffffff" stroke="#1f2e3d" stroke-width="2" stroke-dasharray="5 6"/>
+  <circle cx="126" cy="100" r="20" fill="#ffd7bf"/>
+  <path d="M105 95c5-18 30-24 43-8 5 6 7 13 7 22-17-7-34-11-50-14z" fill="#28384a"/>
+  <path d="M92 150c5-23 22-37 44-37 23 0 40 14 45 37" fill="#1c8bc7"/>
+  <circle cx="118" cy="103" r="3" fill="#1f2e3d"/>
+  <circle cx="137" cy="103" r="3" fill="#1f2e3d"/>
+  <path d="M121 116c5 4 12 4 17 0" fill="none" stroke="#1f2e3d" stroke-width="3" stroke-linecap="round"/>
+  <path d="M180 74h32M180 86h42" stroke="#cfd8e3" stroke-width="5" stroke-linecap="round"/>
+</svg>

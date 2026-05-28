@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 180" role="img" aria-labelledby="title">
+  <title id="title">Comprehensive services</title>
+  <circle cx="140" cy="92" r="64" fill="#e9eef4"/>
+  <rect x="70" y="42" width="62" height="54" rx="10" fill="#0c447c"/>
+  <rect x="148" y="42" width="62" height="54" rx="10" fill="#ffc94d"/>
+  <rect x="70" y="110" width="62" height="54" rx="10" fill="#ec6b1f"/>
+  <rect x="148" y="110" width="62" height="54" rx="10" fill="#1c8bc7"/>
+  <path d="M90 69h23M90 81h31M168 69h21M168 81h30M90 137h28M168 137h27" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="179" cy="65" r="7" fill="#0c447c"/>
+  <path d="M94 135l10 10 20-24" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M168 132l22 22M190 132l-22 22" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+  <path d="M140 70v70M105 104h70" stroke="#cfd8e3" stroke-width="5" stroke-linecap="round"/>
+</svg>

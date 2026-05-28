@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 180" role="img" aria-labelledby="title">
+  <title id="title">Global standards</title>
+  <circle cx="138" cy="92" r="66" fill="#e9eef4"/>
+  <rect x="54" y="48" width="172" height="96" rx="12" fill="#31475e"/>
+  <rect x="66" y="60" width="148" height="72" rx="6" fill="#ffffff"/>
+  <rect x="83" y="76" width="62" height="42" rx="21" fill="#ffc94d"/>
+  <circle cx="114" cy="98" r="20" fill="#ffd7bf"/>
+  <path d="M94 94c6-18 31-21 42-5 3 5 5 10 4 17-16-6-32-9-46-12z" fill="#28384a"/>
+  <path d="M84 126c5-21 20-33 39-33s35 12 40 33" fill="#ec6b1f"/>
+  <rect x="160" y="74" width="38" height="6" rx="3" fill="#cfd8e3"/>
+  <rect x="160" y="88" width="30" height="6" rx="3" fill="#cfd8e3"/>
+  <rect x="160" y="102" width="42" height="6" rx="3" fill="#cfd8e3"/>
+  <circle cx="88" cy="50" r="9" fill="#1c8bc7"/>
+  <circle cx="113" cy="50" r="9" fill="#155a9c"/>
+  <circle cx="138" cy="50" r="9" fill="#ec6b1f"/>
+  <path d="M84 146h112" stroke="#1f2e3d" stroke-width="5" stroke-linecap="round"/>
+  <path d="M212 42c14 8 24 21 27 38" fill="none" stroke="#1f2e3d" stroke-width="2" stroke-dasharray="5 7" stroke-linecap="round"/>
+</svg>

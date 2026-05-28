@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 180" role="img" aria-labelledby="title">
+  <title id="title">Industry expertise</title>
+  <circle cx="116" cy="94" r="64" fill="#e9eef4"/>
+  <path d="M80 136c-21-8-36-26-36-48 0-20 12-38 31-48" fill="none" stroke="#cfd8e3" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="118" cy="82" r="37" fill="#ffc94d"/>
+  <path d="M82 140c6-25 25-42 50-42s45 17 50 42" fill="#155a9c"/>
+  <circle cx="116" cy="72" r="22" fill="#ffd7bf"/>
+  <path d="M92 64c7-20 38-22 51-6 7 9 5 20 3 29-12-8-33-15-54-23z" fill="#28384a"/>
+  <circle cx="105" cy="74" r="3" fill="#1f2e3d"/>
+  <circle cx="126" cy="74" r="3" fill="#1f2e3d"/>
+  <path d="M108 88c7 5 15 5 22 0" fill="none" stroke="#1f2e3d" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="117" cy="80" r="44" fill="none" stroke="#0c447c" stroke-width="11"/>
+  <path d="M151 113l50 50" stroke="#0c447c" stroke-width="13" stroke-linecap="round"/>
+  <path d="M210 50c14 8 23 20 26 36" fill="none" stroke="#1f2e3d" stroke-width="2" stroke-dasharray="5 7" stroke-linecap="round"/>
+</svg>
